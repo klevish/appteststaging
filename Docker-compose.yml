@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: "postgres"  #container instance de l'image 
+    image: "postgres:13-alpine" 
+    restart: "unless-stopped"
+    environment:
+      POSTGRES_DB: "cours"
+      POSTGRES_USER: "cours"
+      POSTGRES_PASSWORD: "cours"
+    volumes:
+      - "./migrations:/docker-entrypoint-initdb.d" #dossier migrations doit être copier dans le conteneur
+      - "cours:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"  #port 5432 du réseau docker exposé sur le port 5432 sur la machine localhost
+
+volumes:
+  cours:

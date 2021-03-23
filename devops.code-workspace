@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "devops_app",
+			"path": "."
+		},
+		{
+			"name": "migrations",
+			"path": "/Users/mariefabre/Documents/migrations"
+		},
+		{
+			"name": "terraform",
+			"path": "/Users/mariefabre/Documents/terraform"
+		}
+	],
+	"settings": {}
+}
